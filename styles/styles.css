@@ -1,62 +1,56 @@
-*,
-::after,
-::before {
-  box-sizing: border-box;
+body,
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   margin: 0;
-  height: 100%;
 }
 
-a {
+.hero-image {
+  background-image: url("https://iso.500px.com/wp-content/uploads/2014/06/W4A2827-1-3000x2000.jpg");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#navbar {
+  background-color: #333; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
   text-decoration: none;
 }
 
-.nav {
-  background-color: #e3f2fd;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-}
-
-.nav-brand {
-  color: rgba(0, 0, 0, 0.9);
-  display: inline-block;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
-.nav-link {
-  color: rgba(0, 0, 0, 0.9);
-  /* text-decoration: none; */
-  display: block;
-  padding: 0.5rem 1rem;
-}
-
-.content {
-  padding-top: 60px;
-}
-
-.container-800 {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.bgimg {
-    background-image: url('https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjEmryOq5_lAhVb5eAKHRUCBc8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc7oV1T2j5mc&psig=AOvVaw1Y1NAsVrME7TWZR5Rp93RI&ust=1571265718527241');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
+.nav-right {
+  float: right;
 }

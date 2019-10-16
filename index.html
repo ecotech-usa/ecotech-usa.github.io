@@ -13,18 +13,47 @@
     />
   </head>
   <body>
-    <nav class="nav fixed-top">
-      <a class="nav-brand" href="#">ecotech-usa</a>
-      <a class="nav-link" href="#">Home</a>
-      <a class="nav-link" href="#products">Products</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
-    <div class="content">
-      <div class="bgimg"></div>
-      <div id="products" class="container-800">Products</div>
-      <div id="about" class="container-800">About</div>
-      <div id="contact" class="container-800">Contact</div>
+    <!-- Navbar -->
+    <!-- <nav>
+      <a href="#home">ecotech-usa</a>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav> -->
+
+    <div class="hero-image" id="home">
+      <div class="hero-text">
+        <h1>ecotech-usa</h1>
+        <i>tagline</i>
+      </div>
     </div>
+
+    <div id="navbar">
+      <a href="#home">ecotech-usa</a>
+      <div class="nav-right">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div style="height: 1000px;"></div>
+
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+      }
+    </script>
   </body>
 </html>
